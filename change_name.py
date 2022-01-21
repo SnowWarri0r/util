@@ -3,7 +3,7 @@ import hashlib
 import uuid
 import time
 
-path = 'C:\\Users\\admin\\Desktop\\计算机专业201班39份\\'
+path = 'C:\\Users\\admin\\Desktop\\反诈\\'
 
 
 def change_name():
@@ -33,5 +33,5 @@ def change_file_md5():
 
 
 if __name__ == '__main__':
-    # change_name()
+    change_name()
     change_file_md5()

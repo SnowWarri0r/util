@@ -25,11 +25,14 @@ def read_ocr_file(file: str, compare_dict: dict[str, str]):
             finished_dict[res] = compare_dict.get(res)
 
     print("total：", len(compare_dict))
+    print()
     print("finished:")
     print(finished_dict, "total:" + str(len(finished_dict)), sep="\n")
+    print()
     print("unfinished:")
     unfinished_set = finished_dict.items() ^ compare_dict.items()
     print(unfinished_set, "total:" + str(len(unfinished_set)), sep="\n")
+    print()
     unfinished_name = ""
     for elem in unfinished_set:
         unfinished_name += "@" + elem[1] + " "
@@ -48,4 +51,5 @@ def read_excel(file) -> dict[str, str]:
 
 
 if __name__ == "__main__":
-    read_ocr_file("./QQ202112111603_OCR/result.txt", read_excel("./bjtxl.xlsx"))
+    read_ocr_file("./QQ202112251919_OCR/result.txt",read_excel("./bjtxl.xlsx"))
+    # read_ocr_file("./QQ202112111603_OCR/result.txt", read_excel("./bjtxl.xlsx"))
